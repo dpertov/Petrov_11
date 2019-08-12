@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>  </title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1> Замыкания </h1>
+		
+		<script>
+
+			function numberGenerator(startNumber, stepNumber) {
+
+				var num = startNumber;
+				
+				 function countNumber() { 
+				    return  num += stepNumber;;
+
+				}
+					return countNumber;
+			}
+
+			var count = numberGenerator(3,2);
+			console.log(count()); // 5
+			console.log(count()); // 7
+
+			var count2 = numberGenerator(3,3);
+			count2(); //6
+			count2(); //9
+			count2(); //12
+			count2(); //15
+				
+
+			console.log('count = ' + count() /*9*/ + ' count2 = ' + count2() /*18*/);
+
+		</script>
+	</body>
+</html>
